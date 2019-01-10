@@ -1,0 +1,18 @@
+#world
+world: worlds
+
+#top exp
+#enable
+exp: true
+
+exp-x: 0
+exp-y: 0
+exp-z: 0
+
+#top farm
+
+farm: true
+
+farm-x: 0
+farm-y: 0
+farm-z: 0
