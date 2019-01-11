@@ -58,8 +58,7 @@ class Main extends PluginBase implements Listener {
 			if($farm == "true"){
 				$this->TopFarm($player);
 				return true;
-			}
-			if($exp == "true"){
+			}elseif($exp == "true"){
 				$this->TopExp($player);
 				return true;
 			}
