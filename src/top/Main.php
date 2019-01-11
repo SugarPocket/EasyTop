@@ -18,6 +18,7 @@ namespace top;
  use pocketmine\block\Block;
  
  use pocketmine\utils\Config;
+ use pocketmine\math\Vector3;
  
  use pocketmine\level\particle\{DustParticle, FlameParticle, FloatingTextParticle, EntityFlameParticle, CriticalParticle, ExplodeParticle, HeartParticle, LavaParticle, MobSpawnParticle, SplashParticle};
  
@@ -27,7 +28,7 @@ class Main extends PluginBase implements Listener {
 	public $plugin;
 
 	public function onEnable(){
-		$this->getLogger()->info("§b EasyTop Enable...");
+		$this->getLogger()->info("Â§b EasyTop Enable...");
 		
 		@mkdir($this->getDataFolder() . "topten_data");
 		
@@ -87,12 +88,12 @@ class Main extends PluginBase implements Listener {
 		$swallet = $data->getAll();
 		$c = count($swallet);
 		$message = "";
-		$top = "§d§lTop 10 player make farm!";
+		$top = "Â§dÂ§lTop 10 player make farm!";
 		arsort($swallet);
 		$i = 1;
 		foreach ($swallet as $name => $amount) {
 					
-			$message .= "§b ".$i.". §7".$name."  §akeep  §f".$amount." §aItem\n";
+			$message .= "Â§b ".$i.". Â§7".$name."  Â§akeep  Â§f".$amount." Â§aItem\n";
 			if($i > 9){
 				break;
 			}
@@ -114,12 +115,12 @@ class Main extends PluginBase implements Listener {
 		$swallet = $data->getAll();
 		$c = count($swallet);
 		$message = "";
-		$top = "§d§lTop 10 EXP!";
+		$top = "Â§dÂ§lTop 10 EXP!";
 		arsort($swallet);
 		$i = 1;
 		foreach ($swallet as $name => $amount) {
 					
-			$message .= "§b ".$i.". §7".$name."    §f".$amount." §aXP_Level\n";
+			$message .= "Â§b ".$i.". Â§7".$name."    Â§f".$amount." Â§aXP_Level\n";
 			if($i > 9){
 				break;
 			}
