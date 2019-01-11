@@ -15,18 +15,19 @@ namespace top;
  use pocketmine\event\block\BlockPlaceEvent;
  use pocketmine\event\block\BlockBreakEvent;
  
- use pocketmine\item\Item;
  use pocketmine\block\Block;
  
+ use pocketmine\utils\Config;
  
-
+ use pocketmine\level\particle\{DustParticle, FlameParticle, FloatingTextParticle, EntityFlameParticle, CriticalParticle, ExplodeParticle, HeartParticle, LavaParticle, MobSpawnParticle, SplashParticle};
+ 
 
 class Main extends PluginBase implements Listener {
 	
 	public $plugin;
 
 	public function onEnable(){
-		$this->getLogger()->info("§bEasyTop...");
+		$this->getLogger()->info("§b EasyTop Enable...");
 		
 		@mkdir($this->getDataFolder() . "topten_data");
 		
