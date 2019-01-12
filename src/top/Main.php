@@ -52,16 +52,13 @@ class Main extends PluginBase implements Listener {
 		$player = $event->getPlayer();
 		$w = $this->getConfig()->get("world");
 		$world = $player->getLevel()->getName() === "$w";
-		$farm = $this->getConfig()->get("farm");
-		$exp = $this->getConfig()->get("exp");
+		$top = $this->getConfig()->get("enable");
+		
 		if($world){
-			if($farm == "true"){
+			if($top == "true"){
 				$this->TopFarm($player);
-				return true;
-			}elseif($exp == "true"){
 				$this->TopExp($player);
-				return true;
-			}
+			
 		}
 	}
 	
